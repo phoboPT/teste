@@ -1,0 +1,29 @@
+{
+    "version": 2,
+    "name": "Braseiro",
+    "builds": [
+        {
+            "src": "src/index.js",
+            "use": "@now/node-server"
+        }
+    ],
+    "routes": [
+        {
+            "src": "src/*",
+            "dest": "/app"
+        }
+    ],
+    "env": {
+        "PRISMA_ENDPOINT": "https://eu1.prisma.sh/hugobrancoc-5773e9/braseiro/braseiro-db",
+        "PRISMA_SECRET": "MySeCrEt",
+        "APP_SECRET": "jwtsecret123",
+        "STRIPE_SECRET": "sk_test_777",
+        "PORT": "4444",
+        "NO_REPLY_EMAIL": "welcome@mydomain.com",
+        "SUPPORT_EMAIL": "support@mydomain.com",
+        "MAIL_HOST": "smtp.mailtrap.io",
+        "MAIL_PORT": "2525",
+        "MAIL_USER": "blahblahblah",
+        "MAIL_PASS": "blahblahblah"
+    }
+}

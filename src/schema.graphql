@@ -1,0 +1,18 @@
+# import * from './generated/prisma.graphql'
+
+
+
+type Mutation{
+  createSupplier(name:String):Supplier!
+  createProduct(name:String,price:Float,supplier:ID):Product!
+  updateProduct(id:ID!,name:String,price:Float,supplier:ID):Product!
+  updateSupplier(id:ID!,name:String):Supplier!
+
+}
+
+type Query{
+    suppliers:[Supplier]! 
+   products(where:ProductWhereInput,orderBy:ProductOrderByInput,skip:Int,first:Int):[Product]!
+   product(where:ProductWhereInput):Product!
+   supplier(where:SupplierWhereInput):Supplier!
+}
